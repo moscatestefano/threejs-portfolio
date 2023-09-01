@@ -1,0 +1,753 @@
+/* GENERAL SETTINGS */
+
+html, body, #root
+{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+body
+{
+  background: rgb(12, 51, 83);
+  font-family: 'roboto', sans-serif;
+}
+
+br
+{
+  margin-bottom: 3px;
+}
+
+/* PLANET ID */
+
+.planetName 
+{
+  text-align: center;
+  background: #181828;
+  color: white;
+  padding: 0px 25px;
+  border-radius: 10px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+/* INFO BUTTON */
+
+#panelToggle
+{
+  position: fixed;
+  left: 1%;
+  bottom: 3%;
+  border-radius: 5px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+#panelToggle:hover
+{
+  box-shadow: 0 0 2px rgb(0,140,255),
+              0 0 12px rgb(0,140,255),
+              0 0 25px rgb(0,140,255),
+              0 0 50px rgb(0,140,255);
+}
+
+/* SOLAR SYSTEM SELECTOR */
+
+.solarSystem
+{
+  position: fixed;
+  top: 1%;
+  left: 49%;
+}
+
+.slider:hover {
+  box-shadow: 0 0 5px rgb(0,140,255),
+              0 0 25px rgb(0,140,255),
+              0 0 50px rgb(0,140,255),
+              0 0 100px rgb(0,140,255);
+}
+
+.slider {
+  position: fixed;
+  top: 1%;
+  left: 45%;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 150px;
+}
+
+.slider-inner {
+  display: block;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+  width: 200%;
+}
+
+.slider-inner:before,
+.slider-inner:after {
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  height: 30px;
+  line-height: 30px;
+  padding: 0;
+  width: 50%;
+}
+
+.slider-inner:before {
+  background-color: #012677;
+  color: #17f9ff;
+  content: "PORT ECORA";
+  padding-left: .75em;
+  text-shadow: 1px 1px #c917ff;
+}
+
+.slider-inner:after {
+  background-color: #012677;
+  color: #17f9ff;
+  content: "LUDICUS IV";
+  padding-right: 0.8em;
+  text-align: right;
+  text-shadow: -1px 1px #c917ff;
+}
+
+.slider-circle {
+  background-color: #17f9ff;
+  border: 1px solid #ffffff;
+  bottom: 0;
+  display: block;
+  margin: 5px;
+  position: absolute;
+  right: 115px;
+  top: 0;
+  transition: all 0.3s ease-in 0s; 
+  width: 20px;
+}
+
+.slider-checkbox:checked + .slider-label .slider-inner {
+  margin-left: 0;
+}
+
+.slider-checkbox:checked + .slider-label .slider-circle {
+  background-color: #17f9ff;
+  right: 0; 
+}
+
+.slider-checkbox {
+  display: none;
+}
+
+.slider-label {
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+}
+
+/* GENERAL INFO PANEL WITH TABS */
+
+.infotabs 
+{
+  position: fixed;
+  border-radius: 5px;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  min-width: 500px;
+  min-height: 300px;
+}
+
+.infotabs div
+{
+  border: none;
+}
+
+.infotabs button 
+{
+  width: 100%;
+  background-color: inherit;;
+  color: aliceblue;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.infotabs button:hover 
+{
+  background-color: hsl(183, 100%, 45%);
+  color: darkmagenta;
+}
+
+.infotabs button.active 
+{
+  background-color: hsl(183, 100%, 35%);
+}
+
+.infotabs button.active:hover
+{
+  background-color: hsl(183, 100%, 35%);
+  color: aliceblue;
+}
+
+a:visited
+{
+  color: hsl(183, 100%, 45%)
+}
+
+.tabcontent 
+{
+  display: none;
+  margin-top: 10px;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+} 
+
+#infotabsinner
+{
+  width: 100%;
+  height: 100%;
+}
+
+#panel1
+{
+  width: 95%;
+  height: 75%;
+  overflow-y: auto;
+}
+
+#panel1 figure
+{
+  float: left;
+  max-width: 45%;
+  margin-left: auto;
+  margin-bottom: 5px;
+}
+
+figure img
+{
+  float: left;
+  max-width: 100%;
+}
+
+figure figcaption
+{
+  text-align: center;
+  text-decoration: underline;
+}
+
+#panel2
+{
+  width: 95%;
+  height: 75%;
+  overflow-y: auto;
+}
+
+#panel3
+{
+  width: 95%;
+  height: 75%;
+  overflow-y: auto;
+}
+
+#panel4
+{
+  width: 95%;
+  height: 75%;
+  overflow-y: auto;
+}
+
+.contact
+{
+  float: left;
+  border: 1px solid;
+  padding: 3vh;
+  margin: 1%;
+}
+
+.contact.idcopy
+{
+  min-width: 220px;
+  padding: 1vh;
+  text-align: center;
+  cursor: pointer;
+}
+
+.creditItem p
+{
+  border: 1px solid aliceblue;
+  border-radius: 3px; 
+  padding: 1ex 1ex;
+  text-align: center;
+}
+
+/* default element of the general panel: copy ID */
+
+div[id="panel1"]
+{
+  display: block;
+}
+
+/* SKILL BARS */
+/* Lots of repetitions, but Mozilla doesn't support CSS nesting */
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.container__progressbars {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	min-width: 270px;
+	width: 100%;
+	min-height: 100%;
+}
+
+.progressbar {
+	position: relative;
+	width: 170px;
+	height: 170px;
+	margin: 1em;
+	transform: rotate(-90deg);
+}
+
+.progressbar__svg {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.progressbar__svg-circle {
+	width: 100%;
+	height: 100%;
+	fill: none;
+	stroke-width: 10;
+	stroke-dasharray: 440;
+	stroke-dashoffset: 440;
+	stroke: hsl(0, 0%, 100%);
+	stroke-linecap: round;
+	transform: translate(5px, 5px);
+}
+
+.progressbar__text 
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0.25em 0.5em;
+  color: hsl(0, 0%, 100%);
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 0.25em;
+  transform: translate(-50%, -50%) rotate(90deg);
+  z-index: 2;
+}
+
+.progressbar img
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  width: 4em;
+  filter: opacity(30%);
+  z-index: 1;
+}
+
+.circle-ble { animation: anim_circle-ble 1s ease-in-out forwards; }
+.circle-cs { animation: anim_circle-cs 1s ease-in-out forwards; }
+.circle-css { animation: anim_circle-css 1s ease-in-out forwards; }
+.circle-git { animation: anim_circle-git 1s ease-in-out forwards; }
+.circle-html { animation: anim_circle-html 1s ease-in-out forwards; }
+.circle-java { animation: anim_circle-java 1s ease-in-out forwards; }
+.circle-js { animation: anim_circle-js 1s ease-in-out forwards; }
+.circle-sem { animation: anim_circle-sem 1s ease-in-out forwards; }
+.circle-py { animation: anim_circle-py 1s ease-in-out forwards; }
+.circle-rea { animation: anim_circle-rea 1s ease-in-out forwards; }
+.circle-ros { animation: anim_circle-ros 1s ease-in-out forwards; }
+.circle-sql { animation: anim_circle-sql 1s ease-in-out forwards; }
+.circle-js3 { animation: anim_circle-js3 1s ease-in-out forwards; }
+.circle-uni { animation: anim_circle-uni 1s ease-in-out forwards; }
+.circle-ue5 { animation: anim_circle-ue5 1s ease-in-out forwards; }
+.circle-xml { animation: anim_circle-xml 1s ease-in-out forwards; }
+
+.shadow-ble { filter: drop-shadow(0 0 5px hsl(15, 100%, 60%)); }
+.shadow-cs { filter: drop-shadow(0 0 5px hsl(92, 100%, 60%)); }
+.shadow-css { filter: drop-shadow(0 0 5px hsl(190, 100%, 60%)); }
+.shadow-git { filter: drop-shadow(0 0 5px hsl(52, 100%, 60%)); }
+.shadow-html { filter: drop-shadow(0 0 5px hsl(231, 100%, 60%)); }
+.shadow-java { filter: drop-shadow(0 0 5px hsl(150, 100%, 60%)); }
+.shadow-js { filter: drop-shadow(0 0 5px hsl(45, 100%, 60%)); }
+.shadow-sem { filter: drop-shadow(0 0 5px hsl(97, 100%, 60%)); }
+.shadow-py { filter: drop-shadow(0 0 5px hsl(160, 100%, 60%)); }
+.shadow-rea { filter: drop-shadow(0 0 5px hsl(2, 100%, 60%)); }
+.shadow-ros { filter: drop-shadow(0 0 5px hsl(220, 100%, 60%)); }
+.shadow-sql { filter: drop-shadow(0 0 5px hsl(251, 100%, 60%)); }
+.shadow-js3 { filter: drop-shadow(0 0 5px hsl(150, 100%, 60%)); }
+.shadow-uni { filter: drop-shadow(0 0 5px hsl(68, 100%, 60%)); }
+.shadow-ue5 { filter: drop-shadow(0 0 5px hsl(39, 100%, 60%)); }
+.shadow-xml { filter: drop-shadow(0 0 5px hsl(47, 100%, 60%)); }
+
+:root 
+{
+  --amt-ble: 1;
+  --amt-cs: 1;
+  --amt-css: 1;
+  --amt-git: 1;
+  --amt-html: 1;
+  --amt-java: 1;
+  --amt-sem: 1;
+  --amt-rea: 1;
+  --amt-ros: 1;
+  --amt-sql: 1;
+  --amt-js3: 1;
+  --amt-uni: 1;
+  --amt-ue5: 1;
+  --amt-xml: 1;
+}
+
+@keyframes anim_circle-ble { to { stroke-dashoffset: var(--amt-ble); } }
+@keyframes anim_circle-cs { to { stroke-dashoffset: var(--amt-cs); } }
+@keyframes anim_circle-css { to { stroke-dashoffset: var(--amt-css); } }
+@keyframes anim_circle-git { to { stroke-dashoffset: var(--amt-git); } }
+@keyframes anim_circle-html { to { stroke-dashoffset: var(--amt-html); } }
+@keyframes anim_circle-java { to { stroke-dashoffset: var(--amt-java); } }
+@keyframes anim_circle-js { to { stroke-dashoffset: var(--amt-js); } }
+@keyframes anim_circle-sem { to { stroke-dashoffset: var(--amt-sem); } }
+@keyframes anim_circle-py { to { stroke-dashoffset: var(--amt-py); } }
+@keyframes anim_circle-rea { to { stroke-dashoffset: var(--amt-rea); } }
+@keyframes anim_circle-ros { to { stroke-dashoffset: var(--amt-ros); } }
+@keyframes anim_circle-sql { to { stroke-dashoffset: var(--amt-sql); } }
+@keyframes anim_circle-js3 { to { stroke-dashoffset: var(--amt-js3); } }
+@keyframes anim_circle-uni { to { stroke-dashoffset: var(--amt-uni); } }
+@keyframes anim_circle-ue5 { to { stroke-dashoffset: var(--amt-ue5); } }
+@keyframes anim_circle-xml { to { stroke-dashoffset: var(--amt-xml); } }
+
+/* PLANET OVERVIEW */
+
+ .sidePanel 
+{
+  position: fixed;
+  width: 0%;
+  height: 100%;
+  max-width: 50%;
+  top: 0;
+  right: 0;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidePanel, .infotabs
+{
+  border: 2px solid hsl(183, 100%, 35%);
+  background: linear-gradient(130deg, hsl(240, 32%, 40%), hsl(240, 100%, 7%));
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: aliceblue;
+}
+
+.sidePanel .closebtn 
+{
+  position: absolute;
+  color: #f1f1f1;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  cursor: default;
+}
+
+.sidePanel .closebtn:hover
+{
+  color:hsl(183, 100%, 45%);
+  cursor: pointer;
+}
+
+#planetinfocontainer div
+{
+  margin: 15px;
+  text-align: justify;
+  text-shadow: 1px 1px 2px #9BC9C7;
+}
+
+#planetinfodetails a
+{
+  color: aliceblue;
+}
+
+#planetinfocontainer li
+{
+  list-style-type: none;
+}
+
+#planetinfocontainer img
+{
+  width: 1em;
+}
+
+#planetinfocontainer h1
+{
+  margin: 15px;
+  text-shadow: 1px 1px 2px #181818;
+}
+
+#planetinfocontainer input 
+{
+  margin: 0 auto;
+  margin-top: 30px;
+  display:block;
+  cursor: not-allowed;
+  border: 1px solid;
+  padding: 3vh;
+}
+
+#loreinfo
+{
+  border: 1px solid aliceblue;
+  text-align: center;
+  padding: 1% 2% 2% 2%;
+  cursor: pointer;
+}
+
+#loreinfo:hover
+{
+  border: 1px solid hsl(183, 100%, 45%);
+  color: hsl(183, 100%, 35%);
+  padding: 1% 2% 2% 2%;
+  cursor: default;
+}
+
+#loreinfo img
+{
+  width: 1em;
+  padding-left: 1ex;
+}
+
+.specifier
+{
+  height: 2%;
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(201, 207, 212);
+}
+
+/* MEDIA AND ROTATION ADJUSTMENTS */
+@media screen and (max-width:1000px)
+{
+  .slider
+  {
+    left: 42%;
+  }
+
+  .sidePanel
+  {
+    max-width: 37%;
+  }
+
+  #panelToggle
+  {
+    height: 48px;
+    width: 48px;
+  }
+}
+
+@media screen and (max-width:900px)
+{
+  .slider
+  {
+    left: 42%;
+  }
+
+  .infotabs 
+  {
+    top: 8%;
+    left: 24%;
+  }
+
+  .sidePanel
+  {
+    max-width: 37%;
+  }
+
+  #panelToggle
+  {
+    height: 48px;
+    width: 48px;
+  }
+}
+
+@media screen and (max-width:780px)
+{
+  .slider
+  {
+    left: 39%;
+  }
+
+  .infotabs 
+  {
+    top: 8%;
+    left: 15%;
+  }
+
+  .sidePanel
+  {
+    max-width: 37%;
+  }
+
+  
+  #panelToggle
+  {
+    height: 48px;
+    width: 48px;
+  }
+
+}
+
+@media screen and (max-width:700px)
+{
+  .slider
+  {
+    left: 39%;
+  }
+
+  .infotabs 
+  {
+    top: 10%;
+    left: 15%;
+  }
+
+  .sidePanel
+  {
+    max-width: 35%;
+  }
+
+  
+  #panelToggle
+  {
+    height: 48px;
+    width: 48px;
+  }
+
+}
+
+@media screen and (max-width:640px)
+{
+  .slider
+  {
+    left: 38%;
+  }
+
+  .infotabs 
+  {
+    top: 5%;
+    left: 10%;
+    min-height: 260px;
+  }
+
+  .sidePanel 
+  {
+    max-width: 34%;
+  }
+
+  #panelToggle
+  {
+    height: 45px;
+    width: 45px;
+  }
+}
+
+@media screen and (max-width:560px)
+{
+  .slider
+  {
+    left: 37%;
+  }
+
+  .infotabs 
+  {
+    top: 5%;
+    left: 5%;
+    min-height: 260px;
+  }
+
+  .sidePanel 
+  {
+    max-width: 33%;
+  }
+
+  #panelToggle
+  {
+    height: 40px;
+    width: 40px;
+  }
+
+  
+}
+
+@media screen and (orientation:portrait)
+{
+  .pleaserotate
+  {
+    position: absolute;
+    display: block;
+    background-color: antiquewhite;
+    color: #020b1f;
+    font-size: x-large;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+  }
+
+  .pleaserotate p
+  {
+    margin: auto;
+    text-align: center;
+    text-shadow: 0px 1px rgb(229, 195, 152);
+    padding-top: 50%;
+    padding-bottom: 50%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .pleaserotate p img
+  {
+    animation: rotatephone 1.8s ease-in-out infinite
+  }
+
+  @keyframes rotatephone { to { rotate: -90deg; } }
+}
+
+@media screen and (orientation:landscape)
+{
+  .pleaserotate
+  {
+    display: none;
+    width: 0%;
+    height: 0%;
+    z-index: -1;
+  }
+}

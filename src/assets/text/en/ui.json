@@ -1,0 +1,256 @@
+{
+    "icons": {
+        "arrow": "./icons/arrow.png",
+        "blender": "./icons/blender.png",
+        "c-sharp": "./icons/c-sharp.png",
+        "css": "./icons/css.png",
+        "drums": "./icons/drums.png",
+        "gamedesign": "./icons/gamedesign.png",
+        "github": "./icons/github.png",
+        "html": "./icons/html5.png",
+        "java": "./icons/java.png",
+        "javascript": "./icons/js.png",
+        "semantic-web": "./icons/semantic-web.png",
+        "python": "./icons/python.png",
+        "react": "./icons/react.png",
+        "ros": "./icons/ros.png",
+        "sql": "./icons/sql.png",
+        "threejs": "./icons/threejs.png",
+        "unity": "./icons/unity.png",
+        "unreal": "./icons/unreal.png",
+        "xml": "./icons/xml.png"
+    },
+    "side": {
+        "name": "planet",
+        "project": "project",
+        "year": "year",
+        "client": "client",
+        "publisher": "publisher",
+        "elements": "elements found",
+        "description": "readings",
+        "lore": "Read the ancient lore from the archive"
+    },
+    "main": {
+        "general": {
+            "label": "General Info",
+            "title": "Who I am",
+            "description": [
+                "I am Stefano Moscatelli, cadet digital humanist and 3D spaceman trained at the University of Pisa. Currently based in Naples (Italy, Planet Earth).",
+                "The Master's Degree in Digital Humanities gave me an all-round view of the IT industry from the Design and evaluation of Multimedia Production and Language Technologies, to Human-Computer Interfaces and programming with the most common languages.",
+                "My passion for both the beauty and complexity of videogames has led me to point my telescope on Graphics, Interactivity and Virtual Environments, and Game Development and Design in particular.",
+                "Nowadays I'm wandering around looking for new planets to explore and push further the boundaries of my knowledge.",
+                "To know me better, here are some things I like (not in strict order)."
+            ],
+            "lists": [
+                {
+                    "intro": "3 favourite videogames (an easy one indeed)",
+                    "choices": [
+                        "Chrono Trigger",
+                        "Super Mario 64",
+                        "Silent Hill"
+                    ]
+                },
+                {
+                    "intro": "3 favourite game developers",
+                    "choices": [
+                        "John Carmack",
+                        "Eric Barone",
+                        "Toby Fox"
+                    ]
+                },
+                {
+                    "intro": "3 favourite game designers",
+                    "choices": [
+                        "Shigeru Miyamoto",
+                        "Gunpei Yokoi",
+                        "Hideo Kojima"
+                    ]
+                },
+                {
+                    "intro": "3 videogames with the best soundtrack (I will cheat here)",
+                    "choices": [
+                        "Undertale",
+                        "Donkey Kong Country (saga)",
+                        "Chrono Trigger / Chrono Cross"
+                    ]
+                },
+                {
+                    "intro": "3 favourite game companies",
+                    "choices": [
+                        "Nintendo",
+                        "Nintendo",
+                        "Nintendo"
+                    ]
+                }
+            ],
+            "image": "./sm-nasa.jpg"
+        },
+        "3dspace": {
+            "label": "3D Space Program",
+            "title": "My Skills",
+            "description": "The training program undertaken - both academic training and self-training - enabled me to master a wide array of technologies in order to reach even the furthest branches of the outer 3D space. These are my skill levels according to T.U.S.E.T. (Totally Unscientific Self-Evaluation Test):",
+            "elements": [
+                {
+                    "el": "Blender",
+                    "abbr": "ble",
+                    "icon": "blender",
+                    "amount": 35
+                },
+                {
+                    "el": "C#",
+                    "abbr": "cs",
+                    "icon": "c-sharp",
+                    "amount": 75
+                },
+                {
+                    "el": "CSS",
+                    "abbr": "css",
+                    "icon": "css",
+                    "amount": 30
+                },
+                {
+                    "el": "Github",
+                    "abbr": "git",
+                    "icon": "github",
+                    "amount": 25
+                },
+                {
+                    "el": "HTML",
+                    "abbr": "html",
+                    "icon": "html",
+                    "amount": 66
+                },
+                {
+                    "el": "Java",
+                    "abbr": "java",
+                    "icon": "java",
+                    "amount": 70
+                },
+                {
+                    "el": "JavaScript",
+                    "abbr": "js",
+                    "icon": "javascript",
+                    "amount": 60
+                },
+                {
+                    "el": "Semantic Web",
+                    "abbr": "sem",
+                    "icon": "semantic-web",
+                    "amount": 50
+                },
+                {
+                    "el": "Python",
+                    "abbr": "py",
+                    "icon": "python",
+                    "amount": 60
+                },
+                {
+                    "el": "React",
+                    "abbr": "rea",
+                    "icon": "react",
+                    "amount": 45
+                },
+                {
+                    "el": "Ros",
+                    "abbr": "ros",
+                    "icon": "ros",
+                    "amount": 20
+                },
+                {
+                    "el": "SQL",
+                    "abbr": "sql",
+                    "icon": "sql",
+                    "amount": 40
+                },
+                {
+                    "el": "Three.js",
+                    "abbr": "js3",
+                    "icon": "threejs",
+                    "amount": 60
+                },
+                {
+                    "el": "Unity3D",
+                    "abbr": "uni",
+                    "icon": "unity",
+                    "amount": 75
+                },
+                {
+                    "el": "Unreal Engine 5",
+                    "abbr": "ue5",
+                    "icon": "unreal",
+                    "amount": 35
+                },
+                {
+                    "el": "XML",
+                    "abbr": "xml",
+                    "icon": "xml",
+                    "amount": 80
+                }
+            ]
+        },
+        "contacts": {
+            "label": "Contacts",
+            "title": "Let's keep in touch",
+            "description": "You can reach me on these channels, even just to report some nasty space bug or say hello. If I don't answer right away, just keep in mind that intergalactic communication takes time, as radio waves are not faster than light.",
+            "oldcv": "You can also read a good ol' plain HTML version of my CV ",
+            "hovertext": "Hover to copy email address",
+            "hoveredtext": "Click to copy to clipboard",
+            "clicktext": "Copied to clipboard!",
+            "linkedin": "https://www.linkedin.com/in/stefano-moscatelli-7561913a/",
+            "github": "https://github.com/moscatestefano"
+        },
+        "changelog": {
+            "label": "Changelog",
+            "title": "Changelog",
+            "description": "Hopefully and according to my availability, this application will undergo some periodic changes and improvements that will be listed here.",
+            "changes": [
+                {
+                    "0": {
+                        "date": "01/09/23",
+                        "change": "improved textures quality/weight ratio"
+                    }
+                },
+                {
+                    
+                    "1": {
+                        "date": "31/08/23",
+                        "change": "improved cubemap"
+                    }
+                },
+                {
+                    "2": {
+                        "date": "30/08/23",
+                        "change": "aired application"
+                    }
+                },
+                {
+                    "3": {
+                        "date": "20/08/23",
+                        "change": "found the keys of the spaceship"
+                    }
+                }
+            ]
+        },
+        "credits": 
+        {
+            "label": "Credits",
+            "description": "A special thanks to the following people for the assets provided:",
+            "items": [
+                {
+                    "item": "spaceship",
+                    "creditor": "EdwinRC",
+                    "link": "https://market.pmnd.rs/model/low-poly-spaceship"
+                },
+                {
+                    "item": "UI sfx",
+                    "creditor": "Michel Baradari",
+                    "link": "https://apollo-music.de/"
+                }
+            ]
+        }
+    },
+    "pleaserotate": {
+        "text": "Please change the orientation of your device for a better experience",
+        "imgUrl": "./rotatedevice.png"
+    }
+}

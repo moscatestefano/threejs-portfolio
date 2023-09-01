@@ -1,0 +1,172 @@
+{
+    "port ecora": {
+        "name": "Port Ecora",
+        "exo": {
+            "name": "Exo",
+            "project": "Project SIDE",
+            "year": 2022,
+            "client": "University of Naples 'Federico II'",
+            "publisher": "",
+            "link": "http://www.dii.unina.it/?&lang=en",
+            "myRole": [
+                "Programming",
+                "Unity 3D",
+                "C#"
+            ],
+            "elements": [
+                "C#",
+                "Unity 3D"
+            ],
+            "elementsTag": [
+                "c-sharp",
+                "unity"
+            ],
+            "flavor": "The scan reveals that Exo is rich in silicon and continuous electrical currents permeats both the air and the subsoil. This planet is home to humans who enhance their abilities through the use of external devices, granting them extraordinary powers.",
+            "description": "Project SIDE was carried on by the University of Naples in collaboration with INAIL to realize an exoscheleton for 'simulated dynamics and haptic interface'. Part of the project involved developing a VR module built in Unity 3D that interfaced with the exoscheleton hardware to provide force feedback based on the tasks performed in the simulated environment."
+        },
+        "trantor": {
+            "name": "Trantor",
+            "project": "Simsoft",
+            "year": "2022-ongoing",
+            "client": "Herobots srl",
+            "publisher": "",
+            "link": "https://www.herobots.eu/solutions-software/",
+            "myRole": [
+                "Programming",
+                "Unity 3D",
+                "C#",
+                "ROS",
+                "Blender"
+            ],
+            "elements": [
+                "C#",
+                "Unity 3D",
+                "ROS",
+                "Blender"
+            ],
+            "elementsTag": [
+                "c-sharp",
+                "unity",
+                "ros",
+                "blender"
+            ],
+            "flavor": "This planet seems to be covered in steel and appears to be fully automated. Here man has achieved such a control over machines that they perform almost any task, even the most dangerous ones. The scan reveals that the name of the planet has been changed since the very first flexible robot prototype achieved worldwide fame for its effectiveness.",
+            "description": "Herobots is an italian company that supplies technology for hardware and software solutions related to flexible manipulators and continuous robots intended to be used in constrained and hazardous environments. In order to improve the design optimization, planning, control and training, they developed an immersive environment to host the robot's digital twin."
+        }
+    },
+    "ludicus IV": {
+        "name": "Ludicus IV",
+        "makkuro": {
+            "name": "Makkuro",
+            "project": "Blind Quest 3: The Ivy Queen",
+            "genre": "Audiogame / RPG",
+            "year": "2022",
+            "client": "",
+            "publisher": "IV Productions",
+            "link": "https://www.audiogame.store/en/products/blind-quest-3-eng",
+            "myRole": [
+                "Programming",
+                "Game Design",
+                "Scripting",
+                "Unity 3D",
+                "C#"
+            ],
+            "elements": [
+                "C#",
+                "Unity 3D",
+                "Game Design"
+            ],
+            "elementsTag": [
+                "c-sharp",
+                "unity",
+                "gamedesign"
+            ],
+            "flavor": "The scan reports that Makkuro is a planet devoid of light. Scientists cannot find an explanation since sunlight only takes 8 minutes to reach its atmosphere. However, it seems that the inhabitants of this planet have adapted incredibly well to blindness and rely solely on their hearing to interact with the environment.",
+            "description": "Blind Quest is a saga centered on the adventures of Nathan, a wandering mercenary. This third chapter sees Nathan a prisoner of the tyrannical Ivy Queen, and once freed he will have to solve the mystery about Ivy Queen's motives for wanting to establish tyrannical dominion."
+        },
+        "nobonia": {
+            "name": "Nobonia",
+            "project": "Nocturama",
+            "genre": "Interactive Visual Novel",
+            "year": "2022",
+            "client": "",
+            "publisher": "IPID - Italian Party of Indie Developers",
+            "link": "https://www.ipid.dev/nocturama/",
+            "myRole": [
+                "Programming",
+                "Game Design",
+                "C#",
+                "Unity 3D",
+                "for the novel 'Requiescat'"
+            ],
+            "elements": [
+                "C#",
+                "Game Design",
+                "Unity 3D",
+                "Game Design"
+            ],
+            "elementsTag": [
+                "c-sharp",
+                "gamedesign",
+                "unity",
+                "gamedesign"
+            ],
+            "flavor": "An eerie silence shrouds this planet. The surface shimmers with the colors of the night and if you look closely you can catch a glimpse of the fiery depths of the molten core, surging through bottomless fissures. Is this planet home to supreme beauty or unspoken horrors? There is only one way to find out...",
+            "description": "Nocturama is a collection of visual novels, all set in the city of Bologna. Each story is developed by a different team and therefore has its own graphic and narrative style. The 9 playable episodes follow their protagonists by tracing the leitmotiv of the work: the most important night of one's existence."
+        },
+        "ban'lonnac": {
+            "name": "Ban'Lonnac",
+            "project": "AssedioX3",
+            "genre": "Action / Shoot 'em up",
+            "year": "2020",
+            "client": "",
+            "publisher": "Personal project",
+            "link": "https://drive.google.com/file/d/1El-ze06Q9vbL6zpy8rDoWsBuyaeTUDNd/view?usp=sharing",
+            "myRole": [
+                "Programming",
+                "Game Design",
+                "C#",
+                "Unity 3D",
+                "Drumming"
+            ],
+            "elements": [
+                "C#",
+                "Game Design",
+                "Unity 3D",
+                "Drums"
+            ],
+            "elementsTag": [
+                "c-sharp",
+                "gamedesign",
+                "unity",
+                "drums"
+            ],
+            "flavor": "The surface of this planet is extremely rough and hard and the scans report that the air is filled with a fine mist resembling ancient gunpowder. I don't see how life can thrive here, but I think it's still worth exploring.",
+            "description": "AssedioX3 is a personal project developed for the Virtual Environments exam of the University of Pisa. It features three levels where the player operated cannon has to reach and destroy the enemy fortress avoiding traps and attacks while spending ability points to upgrade his abilities. Fun fact: since I could not find any free audio track to my liking, I composed all the soundtracks by myself with the help of an electronic drum kit."
+        }, 
+        "boros": {
+            "name": "Boros",
+            "project": "Ouro",
+            "genre": "Adventure / Puzzle",
+            "year": "2022",
+            "client": "",
+            "publisher": "Personal project",
+            "link": "https://globalgamejam.org/2022/games/ouro-9",
+            "myRole": [
+                "Programming",
+                "Unity 3D",
+                "C#"
+            ],
+            "elements": [
+                "C#",
+                "Unity 3D"
+            ],
+            "elementsTag": [
+                "c-sharp",
+                "unity"
+            ],
+            "flavor": "The scans reveal severe temporal anomalies within the atmosphere of this planet. Landing here would mean not knowing wheter one will be thrown to a time before one's birth or far beyond one's death. So, what are we waiting for?",
+            "description": "Ouro is a time-shifting puzzle game, in which the player has to complete different puzzles stuck between past and future thanks to the time traveling ability he possesses. This game was submitted for Global Game Jam 2022."
+        }
+    }
+}
