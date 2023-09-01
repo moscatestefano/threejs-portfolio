@@ -1,4 +1,4 @@
-# Stefano Moscatelli's portofolio
+# Stefano Moscatelli's portfolio
 
 This is the public source code of my portfolio website made with React + Three.js.
 
