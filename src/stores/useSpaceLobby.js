@@ -1,9 +1,10 @@
 import { create } from 'zustand'
 import { subscribeWithSelector } from 'zustand/middleware'
 
+// THIS STORE MANAGES MAIN HUB VARIABLES
+
 export default create(subscribeWithSelector((set) => 
 {
-
     return {
         // MAIN PANEL
         isPanelOpen: false,

@@ -1,43 +1,35 @@
-import Galaxy from './entities/Galaxy.js'
-import HUD from './UI/HUD.js'
-import CameraRig from './entities/CameraRig.js'
-
-import { Suspense } from 'react'
-import * as THREE from 'three'
-import { Canvas } from '@react-three/fiber'
-import { Loader } from '@react-three/drei'
+import HubScene from './HubScene.js'
+import CannonMinigame from './CannonMinigame.js'
 
 import { Analytics } from '@vercel/analytics/react'
 
+import { Route } from 'wouter'
+
+
 export default function App({ ...props })
 {
-
     return <>
-      <Canvas
-        camera={
-          {
-            fov: 45,
-            near: 0.1,
-            far: 75,
-            position: [0, 4, -22],
-            rotation: [Math.PI/4, 0, 0]
-          }
-        }
-        gl={
-          {
-            toneMapping: THREE.ACESFilmicToneMapping
-          }
-        }  
-        >  
-
-          <CameraRig />
-          <Suspense>
-            <Galaxy />
-          </Suspense>
-      </Canvas>
-      <HUD />
-      <Loader />
-
-      <Analytics />
+      <Route path='/'>
+        <HubScene />
+      </Route>
+      <Route path='/lbl-minigame'>
+        <CannonMinigame />
+      </Route>
+      <Route path='/lma-minigame'>
+          {/* <HubScene /> */}
+      </Route>
+      <Route path='/lno-minigame'>
+          {/* <HubScene /> */}
+      </Route>
+      <Route path='/lbo-minigame'>
+          {/* <HubScene /> */}
+      </Route>
+      <Route path='/pex-minigame'>
+          {/* <HubScene /> */}
+      </Route>
+      <Route path='/ptr-minigame'>
+          {/* <HubScene /> */}
+      </Route>
+      {/* <Analytics /> */}
     </>
 }

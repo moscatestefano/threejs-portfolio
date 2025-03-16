@@ -12,6 +12,7 @@ export default function Galaxy()
     loader.setPath("cubemap/1")
 
     const environment = useThree()
+    const sceneObj = []
 
     useEffect(() => {
         const texture = loader.load([
@@ -23,6 +24,23 @@ export default function Galaxy()
             "/nz.jpg"
           ])
           environment.scene.background = texture
+
+          environment.scene.traverse( obj => {
+            if (obj.isMesh)
+                sceneObj.push(obj)
+          })
+          
+
+          return () =>  {        
+            
+            sceneObj.forEach((element, i) => {
+                element.geometry.dispose()
+                element.material.dispose()
+            });
+
+            // DEBUG CALL
+            // console.log("After cleanup ", environment.gl.info)
+          }
     }, [])
 
     const { nodes } = useGLTF('./planet_models/planet.gltf')

@@ -5,6 +5,8 @@ import { useRef, useEffect, useMemo } from 'react'
 import LorePanel from "./LorePanel"
 import uiJson from '../assets/text/en/ui.json'
 
+import { useLocation } from 'wouter'
+
 export default function PlanetSidePanel(props)
 {
 
@@ -12,6 +14,8 @@ export default function PlanetSidePanel(props)
 
     const isPlanetInspected = useSpaceLobby(state => state.planetInspected)
     const planetProps = useSpaceLobby(state => state.currentPlanetProps)
+
+    const [ location, setLocation ] = useLocation()
 
     const audioItem = useMemo(() => new Audio('./sfx/itemback.wav'))
 
@@ -80,7 +84,7 @@ export default function PlanetSidePanel(props)
                         {planetProps?.flavor}
                     </div>
                     <LorePanel description={planetProps?.description} />
-                    {/* <input type="button" disabled value={"Explore " + planetProps?.name} /> */}
+                    <input type="button" value={"Explore " + planetProps?.name} onClick={(e) => setLocation('/lbl-minigame')}/>
                 </div>
             </div>
         </div>
