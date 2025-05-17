@@ -43,6 +43,26 @@ br
   color: hsl(183, 100%, 45%);
 }
 
+.nav_3d a
+{
+  color: hsl(183, 100%, 45%);
+}
+
+.nav_3d a:visited
+{
+  color: hsl(183, 100%, 45%);
+}
+
+.nav_3d a:active
+{
+  color: hsl(183, 100%, 45%);
+}
+
+.nav_3d a:hover
+{
+  color: white;
+}
+
 .description_404
 {
   position: absolute;
