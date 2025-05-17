@@ -1,5 +1,4 @@
 import HubScene from './HubScene.js'
-import CannonGame from './games/CannonGame/CannonGame.js'
 import NotFound from './NotFound.js'
 
 import { Analytics } from '@vercel/analytics/react'
