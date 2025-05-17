@@ -12,6 +12,7 @@ export default function UI_HUD()
     /*
         Info panel link [Lower:Left]
         Galaxy switch [Upper:Center]
+        HTML CV [Upper:Right]
         Planet Side Panel [Right]
     */
 

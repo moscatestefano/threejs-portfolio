@@ -206,25 +206,43 @@
             "changes": [
                 {
                     "0": {
+                        "date": "17/05/25",
+                        "change": "added 404 scene"
+                    }
+                },
+                {
+                    "1": {
+                        "date": "16/05/25",
+                        "change": "added routing; added logic to explore planets"
+                    }
+                },
+                {
+                    "2": {
+                        "date": "15/05/25",
+                        "change": "improved OpenGraph HTML; added button to HTML cv in the 3D scene"
+                    }
+                },
+                {
+                    "3": {
                         "date": "01/09/23",
                         "change": "improved textures quality/weight ratio"
                     }
                 },
                 {
                     
-                    "1": {
+                    "4": {
                         "date": "31/08/23",
                         "change": "improved cubemap"
                     }
                 },
                 {
-                    "2": {
+                    "5": {
                         "date": "30/08/23",
                         "change": "aired application"
                     }
                 },
                 {
-                    "3": {
+                    "6": {
                         "date": "20/08/23",
                         "change": "found the keys of the spaceship"
                     }
@@ -251,6 +269,12 @@
     },
     "pleaserotate": {
         "text": "Please change the orientation of your device for a better experience",
-        "imgUrl": "./rotatedevice.png"
+        "imgUrl": "./rotatedevice.png",
+        "flavorText": "For UX experts: I know it's an antipattern, but please bear with me :)"
+    },
+    "notFoundDescription": {
+        "linkTo": "Main Hub",
+        "notFoundText": "404",
+        "flavorText": "This number lingers in the air. The area is not charted yet. I should go back to exploring."
     }
 }

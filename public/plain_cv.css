@@ -176,4 +176,4 @@ p{line-height:1.25em}
 
 .tooltipmarker:hover .tooltip {display: block;}
 
-.tooltip {position: absolute;white-space: normal;display: none;background: #33332eb0;border: 1px solid black;padding: 5px;z-index: 1000;color: rgb(255, 255, 255);}
+.tooltip {position: absolute;white-space: normal;display: none;background: #33332eb0;border: 1px solid black;padding: 1px;z-index: 1000;color: rgb(255, 255, 255);}

@@ -9,9 +9,9 @@
 				<meta property="og:site_name" content="Stefano Moscatelli - Game and 3D developer">
 				<meta property="og:type" content="website">
 				<meta property="og:url" content="https://stefanomoscatelli.dev">
-				<meta property="og:title" content="Stefano Moscatelli - Game and 3D developer">
+				<meta property="og:title" content="Stefano Moscatelli - Unity, Unreal Engine, AR VR XR developer">
 				<meta property="og:image" content="https://stefanomoscatelli.dev/og_prev_plain_cv.jpg">
-				<meta property="description" content="Stefano Moscatelli's interactive portfolio. Game and virtual environment developer living in Naples (Italy), freelancer.">
+				<meta property="og:description" content="Stefano Moscatelli's portfolio. Game and XR developer with Unity and Unreal Engine based in Naples (Italy), freelancer.">
 				<link rel="preconnect" href="https://fonts.googleapis.com">
 				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 				<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
 
 				<section class="section introduction"> 
 					<h1 class="title">Stefano Moscatelli</h1> 
-					<h1 class="sub-title">Game and Virtual Environment dev</h1>
+					<h1 class="sub-title">Unity, Unreal Engine, XR dev</h1>
 					<p class="description">Hi, I'm Stefano, a freelance developer based in Naples, Italy. I like playing and making videogames. After reading through this, you should really give a look to the 3D version of this cv.</p> 
 				</section>
 
@@ -171,10 +171,43 @@
 							</a></span></span>
 						</div> 
 						<div class="item"> 
-							<div class="name">Simulations and serious gaming</div> 
+							<div class="name">Simulations and serious games</div> 
 							<span class="tooltipmarker">
 								<span class="tooltip">
-									Project SIDE was carried on by the University of Naples in collaboration with INAIL to realize an exoscheleton for 'simulated dynamics and haptic interface'. Part of the project involved developing a VR module built in Unity 3D that interfaced with the exoscheleton hardware to provide force feedback based on the tasks performed in the simulated environment.<br />
+									Project GURU is being carried on by the University of Naples Federico II in collaboration with INAIL to train workers in dangerous environments through VR simulations. The project is being built in Unreal Engine and provides and interface with an exoscheleton hardware to provide force feedback based on the tasks performed in the simulated environment, haptic feedback and can sync with EEG equipment.<br />
+									My contribution:
+									<ul>
+										<li>- Programming in Unreal Engine blueprints</li>
+										<li>- Unreal Engine dev</li>
+									</ul>
+								</span>
+							<a class="button" href="http://www.dii.unina.it/?&lang=en" target="_blank"> 
+								<span class="border"></span> 
+								<span class="label">Project GURU - BRIC 2024</span> 
+								<span class="label-hover"> 
+									<span class="inner">INAIL - BRIC 2024</span> 
+								</span> 
+							</a></span></span> 
+							<span class="tooltipmarker">
+								<span class="tooltip">
+									Robosan is an italian company that provides solutions for biological sampling. In order to reduce errors requiring new samples and speed up check-in at analysis lab, they have developed two apps to operate with a full digital twin of their machine. This simulation (in VR and AR) can work both as a showcase application for medical fairs and a training platform for new operator, as the usage options and the animation speed can be fine tuned.<br />
+									My contribution:
+									<ul>
+										<li>- Programming in C#</li>
+										<li>- Unity3D dev</li>
+										<li>- Blender optimizations</li>
+									</ul>
+								</span>
+							<a class="button" href="https://www.robosan.it/projects_brevettiplus/" target="_blank"> 
+								<span class="border"></span> 
+								<span class="label">Robosan AR + VR</span> 
+								<span class="label-hover"> 
+									<span class="inner">Robosan AR + VR</span> 
+								</span> 
+							</a></span></span> 
+							<span class="tooltipmarker">
+								<span class="tooltip">
+									Project SIDE was carried on by the University of Naples Federico II in collaboration with INAIL to realize an exoscheleton for 'simulated dynamics and haptic interface'. Part of the project involved developing a VR module built in Unity 3D that interfaced with the exoscheleton hardware to provide force feedback based on the tasks performed in the simulated environment.<br />
 									My contribution:
 									<ul>
 										<li>- Programming in C#</li>
@@ -310,8 +343,15 @@
 			function showTooltip(e) {
 				const tooltip = e.currentTarget.children[0]
 
-				tooltip.style.left = e.pageX + e.pageX / 6 + "px"
-				tooltip.style.top = e.pageY - e.pageY / 6 + "px"
+				if (e.pageX <= window.innerWidth / 2)
+					tooltip.style.left = "50px"
+				else
+					tooltip.style.right = "50px"
+
+				if (e.pageY >= window.innerHeight / 2)
+					tooltip.style.top = e.pageY - 222 + "px"
+				else
+					tooltip.style.bottom = e.pageY + 222 + "px"
 			}
 
 			const spans = document.querySelectorAll('.tooltipmarker');

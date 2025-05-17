@@ -9,6 +9,7 @@ import { useLocation } from 'wouter'
 
 export default function PlanetSidePanel(props)
 {
+    // TODO show max score achieved in minigames (if exists)
 
     const panelRef = useRef()
 
@@ -22,6 +23,10 @@ export default function PlanetSidePanel(props)
     useEffect(() => {
         openNavBar()
     }, [isPlanetInspected])
+
+    useEffect(() => {
+        console.log(planetProps?.minigameLink)
+    }, [planetProps])
 
     // const toggleNavBar = () =>
     // {
@@ -84,7 +89,14 @@ export default function PlanetSidePanel(props)
                         {planetProps?.flavor}
                     </div>
                     <LorePanel description={planetProps?.description} />
-                    <input type="button" value={"Explore " + planetProps?.name} onClick={(e) => setLocation('/lbl-minigame')}/>
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px'}}>
+                    <input 
+                        type="button" 
+                        value={"Explore " + planetProps?.name}
+                        disabled={planetProps?.minigameLink != '/ban-lonnac'}
+                        onClick={(e) => setLocation(planetProps?.minigameLink)} />
+                    </div>
+                    {/* TODO place max score here */}
                 </div>
             </div>
         </div>

@@ -16,6 +16,11 @@ export default create(subscribeWithSelector((set) =>
         // SWITCH SYSTEM
         isSwitchToggled: false,
         toggleSwitch: () => set(state => ({isSwitchToggled: !state.isSwitchToggled})),
-        isJumping: false
+        isJumping: false,
+        // SOLAR SYSTEM SELECTION
+        currentSolarSystem: 'ludicus IV', // ludicus by default
+        setCurrentSolarSystem: (newSystem) => set({ currentSolarSystem: newSystem }),
+        lastActiveMinigame: null,
+        setLastActiveMinigame: (minigame) => set({ lastActiveMinigame: minigame })
     }
 }))

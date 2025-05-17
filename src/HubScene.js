@@ -34,10 +34,10 @@ export default function HubScene()
             </Suspense>
 
             {/* DEBUG */}
-            <Stats showPanel={0} className="stats" />
-            <StatsGl className="stats" />
+            {/* <Stats showPanel={0} className="stats" />
+            <StatsGl className="stats" /> */}
         </Canvas>
-
+        <div className='nav_3D'><a href='./plain_cv.html'>HTML version</a></div>
         <HUD />
 
         <Loader />

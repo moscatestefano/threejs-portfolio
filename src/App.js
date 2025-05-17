@@ -1,5 +1,6 @@
 import HubScene from './HubScene.js'
-import CannonMinigame from './CannonMinigame.js'
+import CannonGame from './games/CannonGame/CannonGame.js'
+import NotFound from './NotFound.js'
 
 import { Analytics } from '@vercel/analytics/react'
 
@@ -12,24 +13,24 @@ export default function App({ ...props })
       <Route path='/'>
         <HubScene />
       </Route>
-      <Route path='/lbl-minigame'>
-        <CannonMinigame />
+      <Route path='/ban-lonnac'>
+        <NotFound />
       </Route>
-      <Route path='/lma-minigame'>
-          {/* <HubScene /> */}
+      <Route path='/exo'> 
+        <NotFound />
       </Route>
-      <Route path='/lno-minigame'>
-          {/* <HubScene /> */}
+      <Route path='/trantor'> 
+        <NotFound />
       </Route>
-      <Route path='/lbo-minigame'>
-          {/* <HubScene /> */}
+      <Route path='/makkuro'> 
+        <NotFound />
       </Route>
-      <Route path='/pex-minigame'>
-          {/* <HubScene /> */}
+      <Route path='/nobonia'> 
+        <NotFound />
       </Route>
-      <Route path='/ptr-minigame'>
-          {/* <HubScene /> */}
+      <Route path='/boros'> 
+        <NotFound />
       </Route>
-      {/* <Analytics /> */}
+      <Analytics />
     </>
 }

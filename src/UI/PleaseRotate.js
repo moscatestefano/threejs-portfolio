@@ -5,6 +5,9 @@ export default function PleaseRotate()
     return <div className="pleaserotate">
             <p>{uiJson["pleaserotate"].text}<br />
                 <img src={uiJson["pleaserotate"].imgUrl} alt='rotate your device' />
+                <br />
+                {uiJson["pleaserotate"].flavorText}
             </p>
+            <br/>
         </div>
 }
