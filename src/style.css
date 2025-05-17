@@ -20,6 +20,38 @@ br
   margin-bottom: 3px;
 }
 
+.nav
+{
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  text-align: center;
+  border: 2px solid black;
+  color: black;
+}
+
+.nav_3D
+{
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid hsl(183, 100%, 45%);
+  color: hsl(183, 100%, 45%);
+}
+
+.description_404
+{
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
 /* PLANET ID */
 
 .planetName 

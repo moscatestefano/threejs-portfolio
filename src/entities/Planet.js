@@ -43,7 +43,8 @@ export default function Planet({ planetName,
         elements: planetJson[galaxyFrom][planetName].elements,
         elementsTag: planetJson[galaxyFrom][planetName].elementsTag,
         flavor: planetJson[galaxyFrom][planetName].flavor,
-        description: planetJson[galaxyFrom][planetName].description
+        description: planetJson[galaxyFrom][planetName].description,
+        minigameLink: planetJson[galaxyFrom][planetName].minigameLink
     }
 
     // TEXTURE AND MATERIAL

@@ -5,19 +5,28 @@ import { useRef, useEffect, useMemo } from 'react'
 import LorePanel from "./LorePanel"
 import uiJson from '../assets/text/en/ui.json'
 
+import { useLocation } from 'wouter'
+
 export default function PlanetSidePanel(props)
 {
+    // TODO show max score achieved in minigames (if exists)
 
     const panelRef = useRef()
 
     const isPlanetInspected = useSpaceLobby(state => state.planetInspected)
     const planetProps = useSpaceLobby(state => state.currentPlanetProps)
 
+    const [ location, setLocation ] = useLocation()
+
     const audioItem = useMemo(() => new Audio('./sfx/itemback.wav'))
 
     useEffect(() => {
         openNavBar()
     }, [isPlanetInspected])
+
+    useEffect(() => {
+        console.log(planetProps?.minigameLink)
+    }, [planetProps])
 
     // const toggleNavBar = () =>
     // {
@@ -80,7 +89,14 @@ export default function PlanetSidePanel(props)
                         {planetProps?.flavor}
                     </div>
                     <LorePanel description={planetProps?.description} />
-                    {/* <input type="button" disabled value={"Explore " + planetProps?.name} /> */}
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px'}}>
+                    <input 
+                        type="button" 
+                        value={"Explore " + planetProps?.name}
+                        disabled={planetProps?.minigameLink != '/ban-lonnac'}
+                        onClick={(e) => setLocation(planetProps?.minigameLink)} />
+                    </div>
+                    {/* TODO place max score here */}
                 </div>
             </div>
         </div>
