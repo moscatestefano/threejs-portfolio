@@ -1,4 +1,5 @@
 import HubScene from './HubScene.js'
+import CannonGame from './games/CannonGame/CannonGame.js'
 import NotFound from './NotFound.js'
 
 import { Analytics } from '@vercel/analytics/react'
@@ -13,7 +14,7 @@ export default function App({ ...props })
         <HubScene />
       </Route>
       <Route path='/ban-lonnac'>
-        <NotFound />
+        <CannonGame />
       </Route>
       <Route path='/exo'> 
         <NotFound />

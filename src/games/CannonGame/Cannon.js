@@ -2,37 +2,23 @@ import { useRef, useState, forwardRef, useImperativeHandle } from 'react'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
-import ExplosionEffect from './ExplosionEffect'
-
 const Cannon = forwardRef((props, ref) => 
-  {
+{
 
-  const { shotsLeft, gameState, selectedProjectileType, ...restProps } = props;
+  const { shotsLeft, gameState, selectedProjectileType, onFire, ...restProps } = props;
 
-    const { nodes, materials } = useGLTF('./public/cannon.glb')
+    const { nodes, materials } = useGLTF('/gltfcannon.glb')
     const [explosion, setExplosion] = useState(null);
 
     // Refs for cannon parts
     const standRef = useRef()
     const cannonRef = useRef()
     const spawnPointRef = useRef()
-    const projectilesRef = useRef([]);
-    let explosionRadius = 15
 
     // Expose methods and refs to parent component
     useImperativeHandle(ref, () => ({
     rotateStand,
     elevateCannon,
-    getSpawnPosition: () => {
-        const position = new THREE.Vector3()
-        spawnPointRef.current.getWorldPosition(position)
-        return position
-    },
-    getCannonDirection: () => {
-        const direction = new THREE.Vector3()
-        cannonRef.current.getWorldDirection(direction)
-        return direction
-    },
     fireProjectile,
     // Direct access to parts if needed
     parts: {
@@ -42,46 +28,41 @@ const Cannon = forwardRef((props, ref) =>
     }
     }))
 
-    const fireProjectile = (shotsLeft, gameState, selectedProjectileType) => {
+    const fireProjectile = () => {
         if (shotsLeft <= 0 || gameState !== 'playing') return;
     
-        const rotation = cannonRef.current.rotation;
         const direction = new THREE.Vector3(0, 0, 1)
-          .applyEuler(new THREE.Euler(rotation[0], rotation[1], 0));
+        cannonRef.current.getWorldDirection(direction)
+
+        const spawnPosition = new THREE.Vector3
+        spawnPointRef.current.getWorldPosition(spawnPosition)
         
         // Base velocity adjusted by projectile type
-        let velocity = 20;
-        if (selectedProjectileType === 'HEAVY') velocity *= 0.8;
-        if (selectedProjectileType === 'EXPLOSIVE') velocity *= 1.2;
+        let velocityScalar = 20;
+        if (selectedProjectileType === 'NORMAL') velocityScalar *= 2.2
+        if (selectedProjectileType === 'HEAVY') velocityScalar *= 1.2
+        if (selectedProjectileType === 'EXPLOSIVE') velocityScalar *= 1.5
+
+        const velocity = direction.multiplyScalar(velocityScalar).negate().toArray()
     
         const projectile = {
-          position: [0, 0, -5], // Cannon position
-          velocity: direction.multiplyScalar(velocity).toArray(),
-          type: selectedProjectileType,
-          onCollide: (event) => {
-            // Handle collision effects
-            if (selectedProjectileType === 'EXPLOSIVE') {
-              // Explosion effect
-              setExplosion(event.contact.position);
-            }
-          }
-        };
+          position: spawnPosition.toArray(),
+          velocity,
+          type: selectedProjectileType
+        }
         
-        projectilesRef.current.push(projectile);
-      };
-  const setShotsLeft = prev => {
-          const remaining = prev - 1;
-          if (remaining === 0) {
-            // TODO Check game state after three seconds from the impact
-            // setTimeout(() => handleGameEnd(), 1500);
-          }
-          return remaining;
-        };
+        onFire?.(projectile)
+      }
 
     // Rotation controls
   const rotateStand = angle => {
     if (standRef.current) {
-      standRef.current.rotation.y += angle
+      standRef.current.rotation.y -= angle * 1.5
+      standRef.current.rotation.y = THREE.MathUtils.clamp(
+        standRef.current.rotation.y + angle,
+        -Math.PI / 3,
+        Math.PI / 3
+      )
     }
   }
 
@@ -90,32 +71,28 @@ const Cannon = forwardRef((props, ref) =>
     if (cannonRef.current) {
       cannonRef.current.rotation.x = THREE.MathUtils.clamp(
         cannonRef.current.rotation.x + angle,
-        -Math.PI/4, // -45 degrees
-        Math.PI/4    // +45 degrees
+        -Math.PI/4,
+        Math.PI/4 
       )
     }
   }
 
   return (
     <>
-    <group ref={standRef} name="Stand">
-      <mesh geometry={nodes.Stand.geometry} material={materials.metal} />
-      <group ref={cannonRef} name="Cannon" position={[0, 0.5, 0]}>
-        <mesh geometry={nodes.Cannon.geometry} material={materials.metal} />
-        <group ref={spawnPointRef} name="SpawnPoint" position={[0, 0, 3]} />
+    <group {...props} dispose={null}>
+      <group position={[0.015, -0.55, -3.059]} rotation={[0, Math.PI, 0]}>
+        <mesh ref={standRef} geometry={nodes.cannon_1.geometry} material={materials.iron} > 
+          <mesh geometry={nodes.cannon_2.geometry} material={materials['wood.004']} />
+          <mesh ref={cannonRef} geometry={nodes.barrel.geometry} material={materials.iron} position={[0, 0.283, -0.067]} rotation={[Math.PI/4,0,0]}>
+              <mesh ref={spawnPointRef} geometry={nodes.spawn.geometry} position={[-0.015, 0.005, -0.415]} scale={0.001} />
+          </mesh>
+        </mesh>
       </group>
     </group>
-    {explosion && (
-    <ExplosionEffect
-      position={explosion.position}
-      radius={explosionRadius}
-      onDone={() => setExplosion(null)}
-    />
-    )}
     </>
-    )
+  )
 })
 
-useGLTF.preload('./public/cannon.glb')
+useGLTF.preload('/gltfcannon.glb')
 
 export default Cannon
