@@ -206,43 +206,49 @@
             "changes": [
                 {
                     "0": {
+                        "date": "29/09/25",
+                        "change": "Added ban-lonnac cannon minigame"
+                    }
+                },
+                {
+                    "1": {
                         "date": "17/05/25",
                         "change": "added 404 scene"
                     }
                 },
                 {
-                    "1": {
+                    "2": {
                         "date": "16/05/25",
                         "change": "added routing; added logic to explore planets"
                     }
                 },
                 {
-                    "2": {
+                    "3": {
                         "date": "15/05/25",
                         "change": "improved OpenGraph HTML; added button to HTML cv in the 3D scene"
                     }
                 },
                 {
-                    "3": {
+                    "4": {
                         "date": "01/09/23",
                         "change": "improved textures quality/weight ratio"
                     }
                 },
                 {
                     
-                    "4": {
+                    "5": {
                         "date": "31/08/23",
                         "change": "improved cubemap"
                     }
                 },
                 {
-                    "5": {
+                    "6": {
                         "date": "30/08/23",
                         "change": "aired application"
                     }
                 },
                 {
-                    "6": {
+                    "7": {
                         "date": "20/08/23",
                         "change": "found the keys of the spaceship"
                     }

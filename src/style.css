@@ -43,22 +43,22 @@ br
   color: hsl(183, 100%, 45%);
 }
 
-.nav_3d a
+.nav_3D a
 {
   color: hsl(183, 100%, 45%);
 }
 
-.nav_3d a:visited
+.nav_3D a:visited
 {
   color: hsl(183, 100%, 45%);
 }
 
-.nav_3d a:active
+.nav_3D a:active
 {
-  color: hsl(183, 100%, 45%);
+  color: hsl(183, 58%, 47%);
 }
 
-.nav_3d a:hover
+.nav_3D a:hover
 {
   color: white;
 }
